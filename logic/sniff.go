@@ -1,7 +1,7 @@
 package logic
 
 import (
-	"ARPSpoofing/dao/redis"
+	"ARPSpoofing/dao/memory"
 	"ARPSpoofing/debug"
 	"ARPSpoofing/models"
 	"ARPSpoofing/pkg/routine"
@@ -61,11 +61,12 @@ func Sniff() error {
 			default:
 			}
 			//2.开始工作
-			err := redis.NewLootsSaver().Add(loot)
-			if err != nil {
-				log.Println("redis.NewLootSaver add loot failed,err:", err)
-				return
-			}
+			// err := redis.NewLootsSaver().Add(loot)
+			// if err != nil {
+			// 	log.Println("redis.NewLootSaver add loot failed,err:", err)
+			// 	return
+			// }
+			memory.AddLoot(loot)
 		}
 	}(ctx)
 

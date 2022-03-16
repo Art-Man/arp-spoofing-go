@@ -1,7 +1,7 @@
 package logic
 
 import (
-	"ARPSpoofing/dao/redis"
+	"ARPSpoofing/dao/memory"
 	"ARPSpoofing/debug"
 	"ARPSpoofing/pkg/arp"
 	"ARPSpoofing/pkg/utils"
@@ -38,28 +38,31 @@ func MiddleAttack(ctx context.Context, alice, bob, gateway string) error {
 	}
 	myIP := temp.String()
 	//获取alice的相关信息
-	hosts := redis.NewHosts()
-	aliceHost, err := hosts.Get(alice)
-	if err != nil {
-		log.Println("hosts.Get failed,err:", err)
-		return err
-	}
+	// hosts := redis.NewHosts()
+	// aliceHost, err := hosts.Get(alice)
+	// if err != nil {
+	// 	log.Println("hosts.Get failed,err:", err)
+	// 	return err
+	// }
+	aliceHost := memory.GetHost(alice)
 	aliceMAC, _ := net.ParseMAC(aliceHost.MAC)
 	aliceIP := net.ParseIP(aliceHost.IP)
 	//获取bob的相关信息
-	bobHost, err := hosts.Get(bob)
-	if err != nil {
-		log.Println("host.Get failed,err:", err)
-		return err
-	}
+	// bobHost, err := hosts.Get(bob)
+	// if err != nil {
+	// 	log.Println("host.Get failed,err:", err)
+	// 	return err
+	// }
+	bobHost := memory.GetHost(bob)
 	bobMAC, _ := net.ParseMAC(bobHost.MAC)
 	bobIP := net.ParseIP(bobHost.IP)
 	//获取网关的相关信息
-	gatewayHost, err := hosts.Get(gateway)
-	if err != nil {
-		log.Println("host.Get failed,err:", err)
-		return err
-	}
+	// gatewayHost, err := hosts.Get(gateway)
+	// if err != nil {
+	// 	log.Println("host.Get failed,err:", err)
+	// 	return err
+	// }
+	gatewayHost := memory.GetHost(gateway)
 	gatewayMAC, _ := net.ParseMAC(gatewayHost.MAC)
 	_ = gatewayMAC
 	//开始监听网卡

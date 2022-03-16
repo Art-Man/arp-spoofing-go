@@ -1,9 +1,8 @@
 package logic
 
 import (
-	"ARPSpoofing/dao/redis"
+	"ARPSpoofing/dao/memory"
 	"fmt"
-	"log"
 	"os"
 
 	"github.com/fatih/structs"
@@ -12,11 +11,12 @@ import (
 
 //ShowHosts 展示所有主机
 func ShowHosts() error {
-	hosts, err := redis.NewHosts().GetAll()
-	if err != nil {
-		log.Println(err)
-		return err
-	}
+	// hosts, err := redis.NewHosts().GetAll()
+	// if err != nil {
+	// 	log.Println(err)
+	// 	return err
+	// }
+	hosts := memory.GetAllHosts()
 	if len(hosts) == 0 {
 		return nil
 	}
@@ -41,10 +41,11 @@ func ShowHosts() error {
 
 //ClearHosts  清除所有主机
 func ClearHosts() error {
-	err := redis.NewHosts().Clear()
-	if err != nil {
-		log.Println(err)
-		return err
-	}
+	// err := redis.NewHosts().Clear()
+	// if err != nil {
+	// 	log.Println(err)
+	// 	return err
+	// }
+	memory.ClearHosts()
 	return nil
 }

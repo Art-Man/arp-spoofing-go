@@ -1,16 +1,6 @@
 {
     "name": "arp_app",
     "debug":false,
-    "mysql": {
-        "host": "127.0.0.1",
-        "port": 3306,
-        "user": "root",
-        "passwd": "root",
-        "dbname": "arp",
-        "max_open_conns": 0,
-        "max_idle_conns": 10000,
-        "max_left_time":60
-    },
     "redis": {
         "host": "127.0.0.1",
         "port": 6379,
@@ -21,5 +11,4 @@
     "webspy":{
         "port":8000
     }
-
 }

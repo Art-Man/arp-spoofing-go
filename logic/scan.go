@@ -1,7 +1,7 @@
 package logic
 
 import (
-	"ARPSpoofing/dao/redis"
+	"ARPSpoofing/dao/memory"
 	"ARPSpoofing/debug"
 	"ARPSpoofing/models"
 	"ARPSpoofing/pkg/arp"
@@ -34,11 +34,12 @@ func Scan(c *ishell.Context, ipList []net.IP, ifname string, method string) erro
 		for host := range sender.Recv(ctx) {
 			//查询mac地址对应的厂商信息
 			host.MACInfo = manuf.Search(host.MAC)
-			err = redis.NewHosts().Add(host)
-			if err != nil {
-				log.Println("redis add Host failed,err:", err)
-				return
-			}
+			memory.AddHost(host)
+			// err = redis.NewHosts().Add(host)
+			// if err != nil {
+			// 	log.Println("redis add Host failed,err:", err)
+			// 	return
+			// }
 			select {
 			case <-ctx.Done(): // 等待上级通知退出
 				return

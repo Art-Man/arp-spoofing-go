@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"ARPSpoofing/dao/redis"
+	"ARPSpoofing/dao/memory"
 	"ARPSpoofing/logic"
 	"ARPSpoofing/settings"
 	"ARPSpoofing/vars"
@@ -21,11 +21,12 @@ func MiddleAttackHandler(c *ishell.Context) {
 		return
 	}
 	//2.选择目标主机
-	ipList, err := redis.NewHosts().GetAllIP()
-	if err != nil {
-		c.Println("redis get ip list failed,err:", err)
-		return
-	}
+	// ipList, err := redis.NewHosts().GetAllIP()
+	// if err != nil {
+	// 	c.Println("redis get ip list failed,err:", err)
+	// 	return
+	// }
+	ipList := memory.GetAllIP()
 	noAttackedList := make([]string, 0, len(ipList))
 	for i := range ipList {
 		if ipList[i] == gateway {
