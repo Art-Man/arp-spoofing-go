@@ -1,11 +1,12 @@
 package misc
 
 import (
-	"ARPSpoofing/models"
-	"ARPSpoofing/pkg/arp"
-	"ARPSpoofing/pkg/udp"
 	"context"
 	"net"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/models"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/arp"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/udp"
 )
 
 //RecvSender 混合发送器

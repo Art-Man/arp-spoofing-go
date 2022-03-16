@@ -1,8 +1,9 @@
 package mysql
 
 import (
-	"ARPSpoofing/models"
 	"log"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/models"
 )
 
 //AddHost 添加主机

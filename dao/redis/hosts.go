@@ -1,9 +1,10 @@
 package redis
 
 import (
-	"ARPSpoofing/models"
 	"encoding/json"
 	"log"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/models"
 
 	"github.com/sirupsen/logrus"
 )

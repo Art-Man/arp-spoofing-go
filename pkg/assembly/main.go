@@ -1,11 +1,12 @@
 package assembly
 
 import (
-	"ARPSpoofing/settings"
 	"context"
 	"fmt"
 	"log"
 	"time"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/settings"
 
 	"github.com/google/gopacket"
 	"github.com/google/gopacket/layers"

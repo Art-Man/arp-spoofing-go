@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"ARPSpoofing/logic"
-	"ARPSpoofing/vars"
+	"github.com/ShangRui-hash/arp-spoofing-go/logic"
+	"github.com/ShangRui-hash/arp-spoofing-go/vars"
 
 	"github.com/abiosoft/ishell"
 )

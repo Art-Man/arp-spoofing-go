@@ -1,11 +1,12 @@
 package controllers
 
 import (
-	"ARPSpoofing/pkg/table"
-	"ARPSpoofing/settings"
-	"ARPSpoofing/vars"
 	"fmt"
 	"log"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/table"
+	"github.com/ShangRui-hash/arp-spoofing-go/settings"
+	"github.com/ShangRui-hash/arp-spoofing-go/vars"
 
 	"github.com/abiosoft/ishell"
 	"github.com/google/gopacket/pcap"

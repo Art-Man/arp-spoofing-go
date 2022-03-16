@@ -1,17 +1,18 @@
 package logic
 
 import (
-	"ARPSpoofing/dao/memory"
-	"ARPSpoofing/debug"
-	"ARPSpoofing/models"
-	"ARPSpoofing/pkg/arp"
-	"ARPSpoofing/pkg/routine"
-	"ARPSpoofing/settings"
-	"ARPSpoofing/vars"
 	"context"
 	"log"
 	"net"
 	"time"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/dao/memory"
+	"github.com/ShangRui-hash/arp-spoofing-go/debug"
+	"github.com/ShangRui-hash/arp-spoofing-go/models"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/arp"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/routine"
+	"github.com/ShangRui-hash/arp-spoofing-go/settings"
+	"github.com/ShangRui-hash/arp-spoofing-go/vars"
 
 	"github.com/google/gopacket/layers"
 	"github.com/google/gopacket/pcap"

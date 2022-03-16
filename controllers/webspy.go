@@ -1,9 +1,10 @@
 package controllers
 
 import (
-	"ARPSpoofing/pkg/assembly"
-	"ARPSpoofing/pkg/server"
 	"context"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/assembly"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/server"
 
 	"github.com/abiosoft/ishell"
 	"github.com/spf13/viper"

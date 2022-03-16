@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"ARPSpoofing/logic"
+	"github.com/ShangRui-hash/arp-spoofing-go/logic"
 
 	"github.com/abiosoft/ishell"
 )

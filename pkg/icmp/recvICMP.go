@@ -1,10 +1,11 @@
 package icmp
 
 import (
-	"ARPSpoofing/debug"
-	"ARPSpoofing/models"
-	"ARPSpoofing/pkg/routine"
 	"context"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/debug"
+	"github.com/ShangRui-hash/arp-spoofing-go/models"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/routine"
 
 	"github.com/google/gopacket"
 	"github.com/google/gopacket/layers"

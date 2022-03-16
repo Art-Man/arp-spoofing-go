@@ -1,11 +1,12 @@
 package arp
 
 import (
-	"ARPSpoofing/models"
-	"ARPSpoofing/pkg/utils"
 	"context"
 	"fmt"
 	"net"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/models"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/utils"
 
 	"github.com/google/gopacket/layers"
 	"github.com/google/gopacket/pcap"

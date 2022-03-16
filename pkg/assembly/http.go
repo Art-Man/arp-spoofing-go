@@ -1,9 +1,10 @@
 package assembly
 
 import (
-	"ARPSpoofing/dao/memory"
-	"ARPSpoofing/models"
 	"time"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/dao/memory"
+	"github.com/ShangRui-hash/arp-spoofing-go/models"
 
 	"bufio"
 	"fmt"

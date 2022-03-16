@@ -1,9 +1,10 @@
 package server
 
 import (
-	"ARPSpoofing/dao/memory"
 	"encoding/json"
 	"log"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/dao/memory"
 
 	"github.com/gorilla/websocket"
 )

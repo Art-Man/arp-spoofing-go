@@ -1,7 +1,7 @@
 package memory
 
 import (
-	"ARPSpoofing/models"
+	"github.com/ShangRui-hash/arp-spoofing-go/models"
 )
 
 var (

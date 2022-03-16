@@ -1,13 +1,14 @@
 package udp
 
 import (
-	"ARPSpoofing/models"
-	"ARPSpoofing/pkg/icmp"
-	"ARPSpoofing/pkg/utils"
 	"context"
 	"fmt"
 	"math/rand"
 	"net"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/models"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/icmp"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/utils"
 
 	"github.com/google/gopacket/pcap"
 )

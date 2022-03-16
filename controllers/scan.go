@@ -1,11 +1,12 @@
 package controllers
 
 import (
-	"ARPSpoofing/logic"
-	"ARPSpoofing/pkg/privileges"
-	"ARPSpoofing/settings"
-	"ARPSpoofing/pkg/utils"
 	"log"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/logic"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/privileges"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/utils"
+	"github.com/ShangRui-hash/arp-spoofing-go/settings"
 
 	"github.com/abiosoft/ishell"
 )

@@ -1,8 +1,14 @@
 # [ARP Spoofing]
 <img src="https://img-blog.csdnimg.cn/20210726194704703.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQxNTY0NA==,size_16,color_FFFFFF,t_70" width="400px">
-
+# [Download]
+```
+go install github.com/ShangRui-hash/arp-spoofing-go@latest
+```
 # [Usage]
 
+```
+/bin/bash > sudo arp-spoofing-go 
+阿弥陀佛 > help
 - Commands:
   - clear              clear the screen
   - cut                通过ARP欺骗切断局域网内某台主机的网络
@@ -16,29 +22,13 @@
   - show               展示信息
   - sniff              嗅探用户名和密码
   - webspy             嗅探http报文
-
-# [Example]
-首先启动redis数据库，然后：  
-
 ```
-1.打开go mod 进行依赖管理
-go env -w GO111MODULE=on
-2.设置第三方库的镜像代理  
-go env -w GOPROXY=https://goproxy.cn,https://goproxy.io,direct
-3.运行
-Linux/macOS : sudo go run main.go  
-Windows: go run main.go  
-```
-
-程序会自动连接redis数据库
 
 - step0. show options 检查各项配置是否正确,如果配置不正确，可以使用 set key value 设置选项key的值为value
 - step1. scan 扫描局域网中的主机
 - step2. hosts 查看所有扫描到的主机
 - step3  cut 向某台主机发送arp欺骗报文,启动后 发送数据包的协程将在后台默默运行
 - step4  cut stop 停止发送
-
-
 
 
 其他功能：

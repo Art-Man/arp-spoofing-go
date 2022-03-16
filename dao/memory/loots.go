@@ -1,6 +1,6 @@
 package memory
 
-import "ARPSpoofing/models"
+import "github.com/ShangRui-hash/arp-spoofing-go/models"
 
 var (
 	loots = make([]*models.Loot, 0)

@@ -1,10 +1,11 @@
 package main
 
 import (
-	"ARPSpoofing/logo"
-	"ARPSpoofing/routers"
-	"ARPSpoofing/settings"
 	"log"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/logo"
+	"github.com/ShangRui-hash/arp-spoofing-go/routers"
+	"github.com/ShangRui-hash/arp-spoofing-go/settings"
 
 	"github.com/abiosoft/ishell"
 	"github.com/abiosoft/readline"

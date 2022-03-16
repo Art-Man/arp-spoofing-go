@@ -1,9 +1,10 @@
 package settings
 
 import (
-	"ARPSpoofing/models"
-	"ARPSpoofing/pkg/utils"
 	"fmt"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/models"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/utils"
 
 	"github.com/spf13/viper"
 )

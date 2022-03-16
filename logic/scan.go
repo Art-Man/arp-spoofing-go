@@ -1,19 +1,20 @@
 package logic
 
 import (
-	"ARPSpoofing/dao/memory"
-	"ARPSpoofing/debug"
-	"ARPSpoofing/models"
-	"ARPSpoofing/pkg/arp"
-	"ARPSpoofing/pkg/misc"
-	"ARPSpoofing/pkg/routine"
-	"ARPSpoofing/pkg/udp"
 	"context"
 	"errors"
 	"fmt"
 	"log"
 	"net"
 	"time"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/dao/memory"
+	"github.com/ShangRui-hash/arp-spoofing-go/debug"
+	"github.com/ShangRui-hash/arp-spoofing-go/models"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/arp"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/misc"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/routine"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/udp"
 
 	"github.com/abiosoft/ishell"
 	manuf "github.com/timest/gomanuf"

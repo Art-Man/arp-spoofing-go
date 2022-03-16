@@ -1,8 +1,8 @@
 package routers
 
 import (
-	"ARPSpoofing/controllers"
-	"ARPSpoofing/settings"
+	"github.com/ShangRui-hash/arp-spoofing-go/controllers"
+	"github.com/ShangRui-hash/arp-spoofing-go/settings"
 
 	"github.com/abiosoft/ishell"
 )

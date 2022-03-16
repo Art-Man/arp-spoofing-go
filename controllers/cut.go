@@ -1,13 +1,14 @@
 package controllers
 
 import (
-	"ARPSpoofing/dao/memory"
-	"ARPSpoofing/logic"
-	"ARPSpoofing/models"
-	"ARPSpoofing/pkg/table"
-	"ARPSpoofing/settings"
-	"ARPSpoofing/vars"
 	"fmt"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/dao/memory"
+	"github.com/ShangRui-hash/arp-spoofing-go/logic"
+	"github.com/ShangRui-hash/arp-spoofing-go/models"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/table"
+	"github.com/ShangRui-hash/arp-spoofing-go/settings"
+	"github.com/ShangRui-hash/arp-spoofing-go/vars"
 
 	"github.com/abiosoft/ishell"
 	"github.com/fatih/color"

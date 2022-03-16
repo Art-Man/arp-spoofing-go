@@ -1,9 +1,10 @@
 package logic
 
 import (
-	"ARPSpoofing/dao/memory"
-	"ARPSpoofing/pkg/table"
 	"fmt"
+
+	"github.com/ShangRui-hash/arp-spoofing-go/dao/memory"
+	"github.com/ShangRui-hash/arp-spoofing-go/pkg/table"
 
 	"github.com/fatih/color"
 	"github.com/fatih/structs"
