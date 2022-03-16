@@ -110,7 +110,7 @@ Send Reply packet or Request packet?
 [*] 欺骗协程启动成功
 [*] show cutted 查看当前正在被攻击的设备
 ```
-### show cutted 
+### show cutted  查看当前正在被攻击的设备
 ```
 阿弥陀佛 > show cutted
 +----------------+
