@@ -62,11 +62,6 @@ func Sniff() error {
 			default:
 			}
 			//2.开始工作
-			// err := redis.NewLootsSaver().Add(loot)
-			// if err != nil {
-			// 	log.Println("redis.NewLootSaver add loot failed,err:", err)
-			// 	return
-			// }
 			memory.AddLoot(loot)
 		}
 	}(ctx)

@@ -25,19 +25,8 @@ import (
 //@param target 目标主机的ip地址
 func Cut(method models.DeceitWay, packetType models.PacketType, gateway string, target string) error {
 	//1.获取目标主机的详细信息
-	// hosts := redis.NewHosts()
-	// targetHost, err := hosts.Get(target)
-	// if err != nil {
-	// 	log.Println("redis get target host failed,err:", err)
-	// 	return err
-	// }
 	targetHost := memory.GetHost(target)
 	//2.获取网关的详细信息
-	// gatewayHost, err := hosts.Get(gateway)
-	// if err != nil {
-	// 	log.Println("redis get gateway host failed,err:", err)
-	// 	return err
-	// }
 	gatewayHost := memory.GetHost(gateway)
 	//3.准备表
 	dstIPMap := map[models.DeceitWay]net.IP{

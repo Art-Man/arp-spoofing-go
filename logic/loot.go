@@ -8,10 +8,6 @@ import (
 
 //ShowLoot 展示所有战利品
 func ShowLoot() error {
-	// loots, err := redis.NewLootsSaver().GetAll()
-	// if err != nil {
-	// 	log.Println("redis get all failed,err:", err)
-	// }
 	loots := memory.GetAllLoot()
 	if len(loots) == 0 {
 		return nil
@@ -25,10 +21,6 @@ func ShowLoot() error {
 
 //ClearLoot 清除所有战利品
 func ClearLoot() error {
-	// if err := redis.NewLootsSaver().ClearAll(); err != nil {
-	// 	return err
-	// }
-	// return nil
 	memory.ClearAllLoot()
 	return nil
 }

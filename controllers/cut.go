@@ -23,11 +23,6 @@ func CutHandler(c *ishell.Context) {
 		return
 	}
 	//2.选择目标主机
-	// ipList, err := redis.NewHosts().GetAllIP()
-	// if err != nil {
-	// 	c.Println("redis get ip list failed,err:", err)
-	// 	return
-	// }
 	ipList := memory.GetAllIP()
 	var noCuttedList []string = make([]string, 0)
 	for i := range ipList {

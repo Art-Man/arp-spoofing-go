@@ -6,8 +6,6 @@ import (
 	"log"
 	"net"
 	"net/http"
-
-	"github.com/spf13/viper"
 )
 
 //Run 运行web服务器
@@ -16,7 +14,7 @@ func Run(ctx context.Context) {
 	mux.HandleFunc("/index", homeHandler)
 	mux.HandleFunc("/ws", wsHandler)
 
-	listener, err := net.Listen("tcp", fmt.Sprintf(":%d", viper.GetInt("webspy.port")))
+	listener, err := net.Listen("tcp", ":8000")
 	if err != nil {
 		log.Println("net.Listen failed,err:", err)
 		return

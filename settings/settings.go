@@ -5,8 +5,6 @@ import (
 
 	"github.com/ShangRui-hash/arp-spoofing-go/models"
 	"github.com/ShangRui-hash/arp-spoofing-go/pkg/utils"
-
-	"github.com/spf13/viper"
 )
 
 //ARPScanOptions ARP扫描配置
@@ -16,18 +14,6 @@ var (
 
 //Init 初始化配置
 func Init() (err error) {
-	//指定配置文件
-	viper.SetConfigName("config")
-	viper.SetConfigType("json")
-	viper.AddConfigPath("./conf/")
-	viper.AddConfigPath("/etc/arp/")
-
-	//读取配置文件
-	err = viper.ReadInConfig()
-	if err != nil {
-		fmt.Printf("viper.ReadInConfig() failed,err:%v\n", err)
-		return err
-	}
 	//获取默认网卡、扫描范围、网关
 	defaultIfname, defaultScanRange, defaultGateway, err := utils.GetDefaultOptions()
 	if err != nil {

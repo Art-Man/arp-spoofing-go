@@ -36,11 +36,6 @@ func Scan(c *ishell.Context, ipList []net.IP, ifname string, method string) erro
 			//查询mac地址对应的厂商信息
 			host.MACInfo = manuf.Search(host.MAC)
 			memory.AddHost(host)
-			// err = redis.NewHosts().Add(host)
-			// if err != nil {
-			// 	log.Println("redis add Host failed,err:", err)
-			// 	return
-			// }
 			select {
 			case <-ctx.Done(): // 等待上级通知退出
 				return

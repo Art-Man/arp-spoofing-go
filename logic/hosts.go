@@ -12,11 +12,6 @@ import (
 
 //ShowHosts 展示所有主机
 func ShowHosts() error {
-	// hosts, err := redis.NewHosts().GetAll()
-	// if err != nil {
-	// 	log.Println(err)
-	// 	return err
-	// }
 	hosts := memory.GetAllHosts()
 	if len(hosts) == 0 {
 		fmt.Println(color.YellowString("[*] 没有主机,请先 scan 扫描局域网"))
@@ -38,11 +33,6 @@ func ShowHosts() error {
 
 //ClearHosts  清除所有主机
 func ClearHosts() error {
-	// err := redis.NewHosts().Clear()
-	// if err != nil {
-	// 	log.Println(err)
-	// 	return err
-	// }
 	memory.ClearHosts()
 	return nil
 }
