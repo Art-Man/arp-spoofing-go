@@ -132,7 +132,7 @@ func DigPacket(ctx context.Context, handle *pcap.Handle) <-chan *models.Loot {
 
 //checkKeyword 检查payload中是否含有关键字
 func checkKeyword(payload []byte) (bool, string) {
-	keywords := []string{"username", "uname", "u_name", "user_name", "usr", "login", "manager", "name", "admin", "pass", "pwd"}
+	keywords := []string{"username", "uname", "u_name", "user_name", "usr", "login", "manager", "name", "admin", "pass", "password", "pwd"}
 	//不能嗅探user，因为user-agent 几乎每个http报文中都有
 	//1.将payloads 转化为小写
 	payload = bytes.ToLower(payload)

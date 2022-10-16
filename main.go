@@ -12,7 +12,7 @@ import (
 
 func main() {
 	shell := ishell.NewWithConfig(&readline.Config{
-		Prompt: "arp-spoofing-go > ",
+		Prompt: "arp-spoofing > ",
 	})
 	//初始化配置
 	if err := settings.Init(); err != nil {
