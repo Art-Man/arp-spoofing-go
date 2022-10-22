@@ -78,6 +78,7 @@ func Cut(method models.DeceitWay, packetType models.PacketType, gateway string, 
 		defer debug.Println("ARP欺骗协程退出:", routine.GetGID())
 		//6.开始滴答滴答地发邪恶的ARP欺骗包
 		t := time.NewTicker(time.Millisecond * 10)
+		//t := time.NewTicker(time.Microsecond * 10)
 		defer t.Stop()
 		for range t.C {
 			err := arp.SendARP(handle,
